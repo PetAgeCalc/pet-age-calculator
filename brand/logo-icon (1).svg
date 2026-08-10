@@ -1,0 +1,29 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background badge -->
+  <circle cx="256" cy="256" r="248" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="248" fill="url(#shine)"/>
+  <circle cx="256" cy="256" r="248" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="6"/>
+
+  <!-- Paw print mark -->
+  <g fill="#ffffff">
+    <!-- main pad -->
+    <ellipse cx="256" cy="300" rx="95" ry="80"/>
+    <!-- toes -->
+    <ellipse cx="150" cy="205" rx="42" ry="54" transform="rotate(-18 150 205)"/>
+    <ellipse cx="228" cy="160" rx="44" ry="58" transform="rotate(-6 228 160)"/>
+    <ellipse cx="312" cy="160" rx="44" ry="58" transform="rotate(6 312 160)"/>
+    <ellipse cx="388" cy="205" rx="42" ry="54" transform="rotate(18 388 205)"/>
+  </g>
+</svg>

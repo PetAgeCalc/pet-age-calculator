@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon badge -->
+  <circle cx="110" cy="110" r="102" fill="url(#bg)"/>
+  <circle cx="110" cy="110" r="102" fill="url(#shine)"/>
+  <g fill="#ffffff">
+    <ellipse cx="110" cy="132" rx="40" ry="34" transform="translate(0,3)"/>
+    <ellipse cx="66" cy="90" rx="18" ry="23" transform="rotate(-18 66 90)"/>
+    <ellipse cx="96" cy="72" rx="19" ry="25" transform="rotate(-6 96 72)"/>
+    <ellipse cx="130" cy="72" rx="19" ry="25" transform="rotate(6 130 72)"/>
+    <ellipse cx="160" cy="90" rx="18" ry="23" transform="rotate(18 160 90)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="245" y="102" font-family="Poppins, 'Segoe UI', sans-serif" font-weight="800" font-size="58" fill="#1e293b">Pet Age</text>
+  <text x="245" y="164" font-family="Poppins, 'Segoe UI', sans-serif" font-weight="800" font-size="58" fill="#2563eb">Calculator</text>
+</svg>
