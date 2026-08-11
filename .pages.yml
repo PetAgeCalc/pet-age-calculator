@@ -1,7 +1,7 @@
 media: media
 content:
   - name: posts
-    label: Blog Posts
+    label: Posts
     type: collection
     path: blog
     fields:
