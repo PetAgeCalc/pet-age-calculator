@@ -1,1 +1,18 @@
 
+media: images
+content:
+  - name: Blog Posts
+    folder: blog
+    fields:
+      - name: title
+        type: string
+        label: Title
+        required: true
+      - name: date
+        type: date
+        label: Date
+        required: true
+      - name: body
+        type: markdown
+        label: Content
+        required: true
