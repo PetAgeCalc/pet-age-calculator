@@ -1,4 +1,4 @@
-media: images
+media: media
 content:
   - name: posts
     label: Blog Posts
@@ -7,5 +7,5 @@ content:
     fields:
       - name: title
         type: string
-    v  - name: body
+      - name: body
         type: rich-text
