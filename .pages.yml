@@ -1,8 +1,10 @@
+
 media: images
 content:
   - name: Blog Posts
-    folder: blog
-    extension: html
+    label: Blog Posts
+    type: collection
+    path: blog
     fields:
       - name: title
         type: string
