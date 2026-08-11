@@ -1,16 +1,11 @@
-
 media: images
 content:
-  - name: Blog Posts
+  - name: posts
     label: Blog Posts
     type: collection
     path: blog
     fields:
       - name: title
         type: string
-        label: Title
-        required: true
-      - name: body
-        type: html
-        label: Content
-        required: true
+    v  - name: body
+        type: rich-text
