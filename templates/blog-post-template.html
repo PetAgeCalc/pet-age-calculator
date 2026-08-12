@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<meta name="keywords" content="{{META_KEYWORDS}}">
+<link rel="canonical" href="{{CANONICAL_URL}}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{META_DESCRIPTION}}">
+<meta property="og:url" content="{{CANONICAL_URL}}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F43E;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/blog/blog-style-core.css">
+<base target="_self">
+</head>
+<body>
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" class="nav-brand"><span class="brand-emoji">🐾</span> Pet Age Calculator</a>
+<div class="nav-links">
+<a href="/" class="nav-link">Home <span class="arrow-icon">→</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">→</span></a>
+<a href="/#about" class="nav-link">About Us <span class="arrow-icon">→</span></a>
+<a href="/#contact" class="nav-link">Contact Us <span class="arrow-icon">→</span></a>
+</div>
+<button class="mobile-menu-btn" onclick="document.getElementById('mobileNav').classList.toggle('active')">☰</button>
+</div>
+</nav>
+<div class="mobile-nav-overlay" id="mobileNav">
+<a href="/" class="nav-link">Home <span class="arrow-icon">→</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">→</span></a>
+<a href="/#about" class="nav-link">About Us <span class="arrow-icon">→</span></a>
+<a href="/#contact" class="nav-link">Contact Us <span class="arrow-icon">→</span></a>
+</div>
+
+<header class="article-header">
+<span class="article-tag">{{TAG}}</span>
+<h1>{{TITLE}}</h1>
+<div class="article-meta">📅 {{DATE}} · ⏱ {{READ_TIME}}</div>
+</header>
+
+<div class="breadcrumb">
+<a href="/">Home</a> › <a href="/blog/">Blog</a> › {{TITLE}}
+</div>
+
+<div class="container">
+<div class="article-body">
+{{THUMBNAIL}}
+{{BODY}}
+</div>
+</div>
+
+<footer class="site-footer">
+<div class="footer-brand">🐾 Pet Age Calculator</div>
+<p class="footer-tagline">Helping pet owners understand their furry friends better</p>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/blog/">Blog</a>
+<a href="/#about">About Us</a>
+<a href="/#contact">Contact Us</a>
+<a href="/#privacy">Privacy Policy</a>
+<a href="/#terms">Terms of Use</a>
+</div>
+<div class="footer-divider"></div>
+<p class="footer-copyright">© 2026 Pet Age Calculator. All rights reserved.</p>
+</footer>
+</body>
+</html>
