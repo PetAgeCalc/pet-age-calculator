@@ -8,7 +8,18 @@ content:
       - name: title
         type: string
       - name: image
-        label: Featured Image (Thumbnail)
+        label: Featured Thumbnail
         type: image
-      - name: body
-        type: rich-text
+      - name: sections
+        label: Article Sections
+        type: list
+        fields:
+          - name: subtitle
+            label: Subtitle / Heading
+            type: string
+          - name: section_image
+            label: Section Image
+            type: image
+          - name: content
+            label: Article Details
+            type: rich-text
