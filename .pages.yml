@@ -7,5 +7,8 @@ content:
     fields:
       - name: title
         type: string
+      - name: image
+        label: Featured Image (Thumbnail)
+        type: image
       - name: body
         type: rich-text
