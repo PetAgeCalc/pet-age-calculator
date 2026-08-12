@@ -45,11 +45,14 @@ content:
         label: "Article Content"
         type: rich-text
         required: true
-        description: "WordPress jaisa editor — likhte jao, H2 chahiye to heading button dabao, image chahiye to image button dabakar upload karo."
+        description: "WordPress jaisa editor — likhte jao, H2 chahiye to heading button dabao, image chahiye to image button dabakar upload karo. Jitne chahiye utne, jahan chahiye wahan."
         options:
-          path: images/blog-content
-          extensions: [jpg, jpeg, png, webp]
+          image:
+            path: images/blog-content
+            extensions: [jpg, jpeg, png, webp]
 
+  # Your original raw-HTML posts collection, kept as-is so your 2 existing
+  # articles remain editable exactly as before (untouched).
   - name: legacy_posts
     label: "Old Articles (raw HTML)"
     type: collection
