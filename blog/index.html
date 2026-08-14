@@ -48,66 +48,51 @@
 </header>
 
 <div class="container">
-<!--
-  =====================================================================
-  HOW TO ADD A NEW ARTICLE (read this comment, it never shows on-page)
-  =====================================================================
-  1. Copy the file blog/article-template.html to a new file, e.g.
-     blog/cat-years-explained.html  (use a short, hyphenated, keyword-rich name)
-  2. Fill in the placeholders inside that file (title, meta description,
-     headings, paragraphs) - instructions are written inside it as comments.
-  3. Come back to THIS file and copy one <a class="blog-card"> block below,
-     paste it above the closing </div> of .blog-grid, and update:
-       - href (link to your new file)
-       - the emoji
-       - the tag (category word)
-       - the h2 (headline)
-       - the p (1-2 line summary)
-       - the date
-  4. Save, commit, and push to GitHub - Cloudflare Pages / GitHub Pages
-     will publish it automatically within a minute or two.
-  =====================================================================
--->
-  <div class="blog-card">
-    <div class="blog-thumbnail" style="margin-bottom: 15px;">
-        <img src="https://kimi-web-img.kimi.ai/img/www.thesprucepets.com/14af12fc6f623ba8f79a73be29b985b5d938114c.jpg" alt="6-Month-Old Kitten" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+
+    <!-- 1. Cat Article Card -->
+    <div class="blog-card">
+        <div class="blog-thumbnail" style="margin-bottom: 15px;">
+            <img src="https://kimi-web-img.kimi.ai/img/www.thesprucepets.com/14af12fc6f623ba8f79a73be29b985b5d938114c.jpg" alt="6-Month-Old Kitten" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="blog-category">CAT CARE</div>
+        <h3><a href="6-month-old-kitten-human-years-guide.html">How Old Is a 6-Month-Old Kitten in Human Years? The Complete Guide Every Cat Parent Needs</a></h3>
+        <p>Wondering how old your 6-month-old kitten is in human years? Discover the surprising answer, development stages, and care tips.</p>
+        <div class="blog-meta">📅 August 13, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
     </div>
-    <div class="blog-category">CAT CARE</div>
-    <h3><a href="6-month-old-kitten-human-years-guide.html">How Old Is a 6-Month-Old Kitten in Human Years? The Complete Guide Every Cat Parent Needs</a></h3>
-    <p>Wondering how old your 6-month-old kitten is in human years? Discover the surprising answer, development stages, and care tips.</p>
-    <div class="blog-meta">📅 August 13, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
-</div>
-  <div class="blog-card">
-    <div class="blog-thumbnail" style="margin-bottom: 15px;">
-        <img src="https://kimi-web-img.kimi.ai/img/t3.ftcdn.net/721e9424a9569a675259ff999b2a5e220dbfcfc3.jpg" alt="Dog Years to Human Years" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+
+    <!-- 2. Dog Article Card (Guide 1) -->
+    <div class="blog-card">
+        <div class="blog-thumbnail" style="margin-bottom: 15px;">
+            <img src="https://kimi-web-img.kimi.ai/img/t3.ftcdn.net/721e9424a9569a675259ff999b2a5e220dbfcfc3.jpg" alt="Dog Years to Human Years" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="blog-category">DOG CARE</div>
+        <h3><a href="dog-years-to-human-years-guide.html">Dog Years to Human Years: The Only Guide You Need in 2026</a></h3>
+        <p>Forget Everything You Have Heard About the Multiply-by-7 Rule. Here Is What Veterinarians Actually Want You to Know.</p>
+        <div class="blog-meta">📅 August 12, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
     </div>
-    <div class="blog-category">DOG CARE</div>
-    <h3><a href="dog-years-to-human-years-guide.html">Dog Years to Human Years: The Only Guide You Need in 2026</a></h3>
-    <p>Forget Everything You Have Heard About the Multiply-by-7 Rule. Here Is What Veterinarians Actually Want You to Know.</p>
-    <div class="blog-meta">📅 August 12, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
-</div>
-<a href="/blog/dog-years-to-human-years-guide.html" class="blog-card">
-<div class="blog-card-emoji">🐕</div>
-<div class="blog-card-body">
-<span class="blog-card-tag">Dog Care</span>
-<h2>Dog Years to Human Years: The Complete, Science-Backed Guide</h2>
-<p>Why the "multiply by 7" rule is wrong, and what vets and researchers actually recommend instead.</p>
-<div class="blog-card-meta">📅 8 min read</div>
-</div>
-</a>
 
-<a href="/blog/senior-dog-care-guide.html" class="blog-card">
-<div class="blog-card-emoji">🐕‍🦺</div>
-<div class="blog-card-body">
-<span class="blog-card-tag">Senior Pets</span>
-<h2>Signs Your Dog Is Entering Its Senior Years (And What To Do)</h2>
-<p>The subtle signs of aging most owners miss, and simple changes that keep senior dogs comfortable.</p>
-<div class="blog-card-meta">📅 6 min read</div>
-</div>
+    <!-- 3. Dog Article Card (Science-Backed Guide) -->
+    <div class="blog-card">
+        <div class="blog-thumbnail" style="margin-bottom: 15px;">
+            <img src="https://kimi-web-img.kimi.ai/img/t3.ftcdn.net/721e9424a9569a675259ff999b2a5e220dbfcfc3.jpg" alt="Dog Years Science-Backed Guide" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="blog-category">DOG CARE</div>
+        <h3><a href="dog-years-to-human-years-guide.html">Dog Years to Human Years: The Complete, Science-Backed Guide</a></h3>
+        <p>Why the "multiply by 7" rule is wrong, and what vets and researchers actually recommend instead.</p>
+        <div class="blog-meta">📅 August 11, 2026 &nbsp;|&nbsp; ⏱️ 8 min read</div>
+    </div>
 
-<!-- Add more <a class="blog-card"> blocks here as you publish new articles -->
+    <!-- 4. Senior Dog Care Card -->
+    <div class="blog-card">
+        <div class="blog-thumbnail" style="margin-bottom: 15px;">
+            <img src="https://kimi-web-img.kimi.ai/img/t3.ftcdn.net/721e9424a9569a675259ff999b2a5e220dbfcfc3.jpg" alt="Senior Dog Care" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+        </div>
+        <div class="blog-category">SENIOR PETS</div>
+        <h3><a href="senior-dog-care-guide.html">Signs Your Dog Is Entering Its Senior Years (And What To Do)</a></h3>
+        <p>The subtle signs of aging most owners miss, and simple changes that keep senior dogs comfortable.</p>
+        <div class="blog-meta">📅 August 10, 2026 &nbsp;|&nbsp; ⏱️ 6 min read</div>
+    </div>
 
-</div>
 </div>
 
 <footer class="site-footer">
