@@ -17,6 +17,87 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/blog/blog-style-core.css">
 <base target="_self">
+<style>
+    /* Clean, universal styling for consistent card layout and perfect image fit */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+    }
+    .blog-card {
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    .blog-thumbnail {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: #f5f0eb;
+        margin: 0 !important;
+    }
+    .blog-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover !important;
+        display: block;
+    }
+    .blog-card-content {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .blog-category {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #2d6a4f;
+        letter-spacing: 0.5px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+    .blog-card h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+    .blog-card h3 a {
+        color: #2d6a4f;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .blog-card h3 a:hover {
+        color: #40916c;
+        text-decoration: underline;
+    }
+    .blog-card p {
+        font-size: 0.95rem;
+        color: #4a4a4a;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+    .blog-card .blog-meta {
+        font-size: 0.85rem;
+        color: #6c757d;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 12px;
+        margin-top: auto;
+    }
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -48,74 +129,83 @@
 </header>
 
 <div class="container">
-    <!-- Rabbit Article Card -->
+    <!-- 1. Rabbit Article Card -->
     <div class="blog-card">
-        <div class="blog-thumbnail" style="margin-bottom: 15px; background: #f5f0eb; border-radius: 8px; overflow: hidden; height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="https://kimi-web-img.kimi.ai/img/img.magnific.com/2064928bfb506a62c7fb582b1fb5c1e2e88beaf4.jpg" alt="Rabbit Age Calculator Guide" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        <div class="blog-thumbnail">
+            <img src="https://kimi-web-img.kimi.ai/img/img.magnific.com/2064928bfb506a62c7fb582b1fb5c1e2e88beaf4.jpg" alt="Rabbit Age Calculator Guide">
         </div>
-        <div class="blog-category">PET CARE</div>
-        <h3><a href="https://petagecalc.in/blog/rabbit-age-in-human-years.html">Rabbit Age in Human Years Calculator: Complete Guide & Accurate Chart 2026</a></h3>
-        <p>Discover exactly how old your bunny is in human years with veterinary-backed conversion formulas and life stage breakdowns.</p>
-        <div class="blog-meta">📅 August 15, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
+        <div class="blog-card-content">
+            <div class="blog-category">PET CARE</div>
+            <h3><a href="https://petagecalc.in/blog/rabbit-age-in-human-years.html">Rabbit Age in Human Years Calculator: Complete Guide & Accurate Chart 2026</a></h3>
+            <p>Discover exactly how old your bunny is in human years with veterinary-backed conversion formulas and life stage breakdowns.</p>
+            <div class="blog-meta">📅 August 15, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
+        </div>
     </div>
     
-<!-- Cow Article Card -->
+    <!-- 2. Cow Article Card -->
     <div class="blog-card">
-        <div class="blog-thumbnail" style="margin-bottom: 15px; background: #f5f0eb; border-radius: 8px; overflow: hidden; height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="/images/cow-header.png" alt="Cow Age in Human Years" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        <div class="blog-thumbnail">
+            <img src="/images/cow-header.png" alt="Cow Age in Human Years">
         </div>
-        <div class="blog-category">CATTLE CARE</div>
-        <h3><a href="cow-age-in-human-years.html">Cow Age in Human Years: Complete Guide & Calculator 2026</a></h3>
-        <p>Discover how to convert cow years to human years accurately. Learn cattle aging stages, lifespan factors, and care guides.</p>
-        <div class="blog-meta">📅 August 14, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
-    </div>
-    <!-- 1. Cat Article Card -->
-    <div class="blog-card">
-        <div class="blog-thumbnail" style="margin-bottom: 15px;">
-            <img src="https://kimi-web-img.kimi.ai/img/www.thesprucepets.com/14af12fc6f623ba8f79a73be29b985b5d938114c.jpg" alt="6-Month-Old Kitten" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px;">
+        <div class="blog-card-content">
+            <div class="blog-category">CATTLE CARE</div>
+            <h3><a href="cow-age-in-human-years.html">Cow Age in Human Years: Complete Guide & Calculator 2026</a></h3>
+            <p>Discover how to convert cow years to human years accurately. Learn cattle aging stages, lifespan factors, and care guides.</p>
+            <div class="blog-meta">📅 August 14, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
         </div>
-        <div class="blog-category">CAT CARE</div>
-        <h3><a href="6-month-old-kitten-human-years-guide.html">How Old Is a 6-Month-Old Kitten in Human Years? The Complete Guide Every Cat Parent Needs</a></h3>
-        <p>Wondering how old your 6-month-old kitten is in human years? Discover the surprising answer, development stages, and care tips.</p>
-        <div class="blog-meta">📅 August 13, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
     </div>
 
-    <!-- 2. Dog Article Card (First) -->
+    <!-- 3. Cat Article Card -->
     <div class="blog-card">
-        <div class="blog-thumbnail" style="margin-bottom: 15px; background: #f0f0f0; border-radius: 8px; overflow: hidden; height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="/images/a448f5b1e026fd564afb999bb7c49fd25fc053ba.jpg" alt="Dog Years to Human Years" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="blog-thumbnail">
+            <img src="https://kimi-web-img.kimi.ai/img/www.thesprucepets.com/14af12fc6f623ba8f79a73be29b985b5d938114c.jpg" alt="6-Month-Old Kitten">
         </div>
-        <div class="blog-category">DOG CARE</div>
-        <h3><a href="dog-years-to-human-years-guide.html">Dog Years to Human Years: The Only Guide You Need in 2026</a></h3>
-        <p>Forget Everything You Have Heard About the Multiply-by-7 Rule. Here Is What Veterinarians Actually Want You to Know.</p>
-        <div class="blog-meta">📅 August 12, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
-    </div>
-
-    <!-- 3. Dog Article Card (Second - Senior Dog) -->
-    <div class="blog-card">
-        <div class="blog-thumbnail" style="margin-bottom: 15px; background: #f5f0eb; border-radius: 8px; overflow: hidden; height: 180px; display: flex; align-items: center; justify-content: center;">
-            <img src="/images/stage-senior.png" alt="Senior Dog Care" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        <div class="blog-card-content">
+            <div class="blog-category">CAT CARE</div>
+            <h3><a href="6-month-old-kitten-human-years-guide.html">How Old Is a 6-Month-Old Kitten in Human Years? The Complete Guide Every Cat Parent Needs</a></h3>
+            <p>Wondering how old your 6-month-old kitten is in human years? Discover the surprising answer, development stages, and care tips.</p>
+            <div class="blog-meta">📅 August 13, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
         </div>
-        <div class="blog-category">SENIOR PETS</div>
-        <h3><a href="senior-dog-care-guide.html">Signs Your Dog Is Entering Its Senior Years (And What To Do)</a></h3>
-        <p>The subtle signs of aging most owners miss, and simple changes that keep senior dogs comfortable.</p>
-        <div class="blog-meta">📅 August 10, 2026 &nbsp;|&nbsp; ⏱️ 6 min read</div>
     </div>
 
-</div>
-    
-
-    <!-- 4. Senior Dog Care Card -->
+    <!-- 4. Dog Article Card (First) -->
     <div class="blog-card">
-    <div class="blog-thumbnail" style="margin-bottom: 15px; background: #f5f0eb; border-radius: 8px; overflow: hidden; height: 180px; display: flex; align-items: center; justify-content: center;">
-        <img src="/images/stage-geriatric.png" alt="Geriatric Dog Care" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        <div class="blog-thumbnail">
+            <img src="/images/a448f5b1e026fd564afb999bb7c49fd25fc053ba.jpg" alt="Dog Years to Human Years">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-category">DOG CARE</div>
+            <h3><a href="dog-years-to-human-years-guide.html">Dog Years to Human Years: The Only Guide You Need in 2026</a></h3>
+            <p>Forget Everything You Have Heard About the Multiply-by-7 Rule. Here Is What Veterinarians Actually Want You to Know.</p>
+            <div class="blog-meta">📅 August 12, 2026 &nbsp;|&nbsp; ⏱️ 10 min read</div>
+        </div>
     </div>
-    <div class="blog-category">SENIOR PETS</div>
-    <h3><a href="geriatric-dog-care-guide.html">Your Dog in the Geriatric Stage: What You Need to Know</a></h3>
-    <p>Essential tips and expert care guides to keep your very elderly canine comfortable and happy.</p>
-    <div class="blog-meta">📅 August 14, 2026 &nbsp;|&nbsp; ⏱️ 7 min read</div>
-</div>
 
+    <!-- 5. Dog Article Card (Second - Senior Dog) -->
+    <div class="blog-card">
+        <div class="blog-thumbnail">
+            <img src="/images/stage-senior.png" alt="Senior Dog Care">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-category">SENIOR PETS</div>
+            <h3><a href="senior-dog-care-guide.html">Signs Your Dog Is Entering Its Senior Years (And What To Do)</a></h3>
+            <p>The subtle signs of aging most owners miss, and simple changes that keep senior dogs comfortable.</p>
+            <div class="blog-meta">📅 August 10, 2026 &nbsp;|&nbsp; ⏱️ 6 min read</div>
+        </div>
+    </div>
+
+    <!-- 6. Senior Dog Care Card -->
+    <div class="blog-card">
+        <div class="blog-thumbnail">
+            <img src="/images/stage-geriatric.png" alt="Geriatric Dog Care">
+        </div>
+        <div class="blog-card-content">
+            <div class="blog-category">SENIOR PETS</div>
+            <h3><a href="geriatric-dog-care-guide.html">Your Dog in the Geriatric Stage: What You Need to Know</a></h3>
+            <p>Essential tips and expert care guides to keep your very elderly canine comfortable and happy.</p>
+            <div class="blog-meta">📅 August 14, 2026 &nbsp;|&nbsp; ⏱️ 7 min read</div>
+        </div>
+    </div>
 </div>
 
 <footer class="site-footer">
