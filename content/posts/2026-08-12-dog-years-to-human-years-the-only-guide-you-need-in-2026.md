@@ -1,6 +1,6 @@
 {
   "title": "Dog Years to Human Years: The Only Guide You Need in 2026",
-  "thumbnail": "/media/a448f5b1e026fd564afb999bb7c49fd25fc053ba.jpg",
+  "thumbnail": "/images/a448f5b1e026fd564afb999bb7c49fd25fc053ba.jpg",
   "tag": "Dog years,",
   "date": "August 2026",
   "read_time": "10 min",
