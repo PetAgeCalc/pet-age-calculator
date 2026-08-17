@@ -1,6 +1,0 @@
-title: "Pet Age Calculator"
-email: "your-email@example.com"
-description: "Helping pet owners understand their furry friends better"
-baseurl: "" # agar domain root par hai toh ise khali chhod dein
-url: "https://petagecalc.in"
-markdown: kramdown
