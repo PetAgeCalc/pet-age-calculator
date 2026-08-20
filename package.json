@@ -3,6 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "node scripts/build-blog.js && node scripts/inject-related.js"
+    "build": "echo 'Static site - no build needed'"
   }
 }
