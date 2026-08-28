@@ -15,7 +15,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://petagecalc.in/
-          exclude-paths: /about.html /contact.html
+          exclude-paths: /yandex_2fe67b41e9739055.html /blog/article-template.html /templates/blog-post-template.html
       - name: Commit & Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
