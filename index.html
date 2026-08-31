@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Age Calculator | Dog, Cat, Cow, Horse, Rabbit & Parrot Human Years</title>
+<meta name="description" content="Free pet age calculator! Convert your dog, cat, cow, horse, rabbit or parrot's age to human years using scientific breed-adjusted formulas. Supports 100+ breeds.">
+<meta name="keywords" content="dog age calculator, cat age calculator, cow age calculator, horse age calculator, rabbit age calculator, parrot age calculator, pet years to human years, horse age in human years">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Pet Age Calculator">
+<link rel="canonical" href="https://www.petagecalc.in/">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pet Age Calculator | Dog, Cat, Cow, Horse, Rabbit & Parrot Human Years">
+<meta property="og:description" content="Free pet age calculator! Convert your dog, cat, cow, horse, rabbit or parrot's age to human years using scientific breed-adjusted formulas. Supports 100+ breeds.">
+<meta property="og:url" content="https://www.petagecalc.in/">
+<meta property="og:image" content="https://www.petagecalc.in/images/dog-header.png">
+<meta property="og:site_name" content="Pet Age Calculator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pet Age Calculator | Dog, Cat, Cow, Horse, Rabbit & Parrot Human Years">
+<meta name="twitter:description" content="Free pet age calculator! Convert your dog, cat, cow, horse, rabbit or parrot's age to human years using scientific breed-adjusted formulas.">
+<meta name="twitter:image" content="https://www.petagecalc.in/images/dog-header.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pet Age Calculator",
+  "url": "https://www.petagecalc.in/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "description": "Free pet age calculator to convert your dog, cat, cow, horse, rabbit or parrot's age to human years using scientific breed-adjusted formulas.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate a pet's age in human years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our calculator uses a scientifically adjusted formula: Year 1 equals 15 human years, Year 2 adds 9 more (total 24), and each subsequent year is adjusted based on the specific breed's average lifespan. This applies to dogs, cats, cows, horses, rabbits, and parrots."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the 7-year rule for dog years accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, the multiply-by-7 rule is outdated and inaccurate for all species. Pets age much faster in their first two years. A 1-year-old dog is about 15 in human years, not 7. Scientific research using DNA methylation has shown that aging is logarithmic, not linear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do parrots live compared to other pets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parrots have the longest lifespans among common pets. Small parrots like budgies live 8-15 years, while large macaws can live 50-80 years. This means a 10-year-old macaw is only about 30 in human years, while a 10-year-old budgie is around 68."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do small pets always live longer than large ones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the species. Among dogs, small breeds generally live longer. However, for parrots, larger species like macaws live much longer than small budgies. For rabbits, giant breeds tend to have slightly shorter lifespans than dwarf breeds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do cow years compare to human years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cows mature relatively quickly. Year 1 equals about 15 human years, and Year 2 equals 24 total. After that, they age about 2.5-4 human years per cow year depending on the breed. Pet cows can live 15-20 years, making them comparable to large dogs in aging rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do horse years compare to human years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Horses reach about 15 human years at age 1 and 24 human years by age 2, just like most other pets. After that they age more gradually - roughly 2 to 2.5 human years per horse year. Ponies and light breeds often live close to 30 years, while draft breeds like Clydesdales and Belgians tend to live 20-25 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is a rabbit considered a senior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rabbits are generally considered seniors around 5-6 years old, which equals roughly 40-50 human years. Giant breeds may become seniors earlier (around 4-5 years), while smaller dwarf breeds may not show senior signs until 6-7 years."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" class="nav-brand">Pet Age Calculator</a>
+<div class="nav-links">
+<a href="/" class="nav-link">Home <span class="arrow-icon">&rarr;</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">&rarr;</span></a>
+<a href="/about.html" class="nav-link">About Us <span class="arrow-icon">&rarr;</span></a>
+<a href="/contact.html" class="nav-link">Contact Us <span class="arrow-icon">&rarr;</span></a>
+</div>
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+</div>
+</nav>
+<div class="mobile-nav-overlay" id="mobileNav">
+<a href="/" class="nav-link">Home <span class="arrow-icon">&rarr;</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">&rarr;</span></a>
+<a href="/about.html" class="nav-link">About Us <span class="arrow-icon">&rarr;</span></a>
+<a href="/contact.html" class="nav-link">Contact Us <span class="arrow-icon">&rarr;</span></a>
+</div>
+<div id="page-home">
+<header class="site-header">
+<div class="header-content">
+<div class="header-pet-photos">
+<img src="/images/dog-header.png" alt="Dog age calculator" class="header-pet-photo" width="140" height="140">
+<img src="/images/cat-header.png" alt="Cat age calculator" class="header-pet-photo" width="140" height="140">
+<img src="/images/cow-header.png" alt="Cow age calculator" class="header-pet-photo" width="140" height="140">
+<img src="/images/horse-header.png" alt="Horse age calculator" class="header-pet-photo" width="140" height="140">
+<img src="/images/rabbit-header.png" alt="Rabbit age calculator" class="header-pet-photo" width="140" height="140">
+<img src="/images/parrot-header.png" alt="Parrot age calculator" class="header-pet-photo" width="140" height="140">
+</div>
+<h1 class="logo">Pet Age Calculator</h1>
+<p class="tagline">Discover your dog, cat, cow, horse, rabbit or parrot's true age in human years using scientifically accurate formulas</p>
+</div>
+</header>
+<div class="container">
+<div class="calculator-wrapper">
+<div class="calc-header">
+<h2>How Old Is Your Pet?</h2>
+<p>Select your pet type, breed, and age to get an accurate human age estimate</p>
+</div>
+<div class="pet-selector">
+<button class="pet-btn active" onclick="selectPetType('dog')" id="btn-dog">
+<img src="/images/dog-header.png" alt="Dog" class="pet-btn-img" width="56" height="56">
+<span>Dog</span>
+</button>
+<button class="pet-btn" onclick="selectPetType('cat')" id="btn-cat">
+<img src="/images/cat-header.png" alt="Cat" class="pet-btn-img" width="56" height="56">
+<span>Cat</span>
+</button>
+<button class="pet-btn" onclick="selectPetType('cow')" id="btn-cow">
+<img src="/images/cow-header.png" alt="Cow" class="pet-btn-img" width="56" height="56">
+<span>Cow</span>
+</button>
+<button class="pet-btn" onclick="selectPetType('horse')" id="btn-horse">
+<img src="/images/horse-header.png" alt="Horse" class="pet-btn-img" width="56" height="56">
+<span>Horse</span>
+</button>
+<button class="pet-btn" onclick="selectPetType('rabbit')" id="btn-rabbit">
+<img src="/images/rabbit-header.png" alt="Rabbit" class="pet-btn-img" width="56" height="56">
+<span>Rabbit</span>
+</button>
+<button class="pet-btn" onclick="selectPetType('parrot')" id="btn-parrot">
+<img src="/images/parrot-header.png" alt="Parrot" class="pet-btn-img" width="56" height="56">
+<span>Parrot</span>
+</button>
+</div>
+<div class="form-group">
+<label class="form-label" for="breed">Select Breed</label>
+<select class="form-select" id="breed">
+<option value="mixed">Mixed Breed / Other</option>
+<option value="labrador">Labrador Retriever</option>
+<option value="german_shepherd">German Shepherd</option>
+<option value="golden_retriever">Golden Retriever</option>
+<option value="bulldog">Bulldog</option>
+<option value="beagle">Beagle</option>
+<option value="poodle">Poodle</option>
+<option value="rottweiler">Rottweiler</option>
+<option value="yorkshire_terrier">Yorkshire Terrier</option>
+<option value="boxer">Boxer</option>
+<option value="dachshund">Dachshund</option>
+<option value="siberian_husky">Siberian Husky</option>
+<option value="doberman">Doberman Pinscher</option>
+<option value="great_dane">Great Dane</option>
+<option value="shih_tzu">Shih Tzu</option>
+<option value="chihuahua">Chihuahua</option>
+<option value="pomeranian">Pomeranian</option>
+<option value="border_collie">Border Collie</option>
+<option value="australian_shepherd">Australian Shepherd</option>
+<option value="cocker_spaniel">Cocker Spaniel</option>
+<option value="shetland_sheepdog">Shetland Sheepdog</option>
+<option value="boston_terrier">Boston Terrier</option>
+<option value="havanese">Havanese</option>
+<option value="bernese_mountain">Bernese Mountain Dog</option>
+<option value="miniature_schnauzer">Miniature Schnauzer</option>
+<option value="cavalier_king_charles">Cavalier King Charles Spaniel</option>
+<option value="shiba_inu">Shiba Inu</option>
+<option value="english_mastiff">English Mastiff</option>
+<option value="bichon_frise">Bichon Frise</option>
+<option value="maltese">Maltese</option>
+<option value="papillon">Papillon</option>
+<option value="french_bulldog">French Bulldog</option>
+<option value="pitbull">Pit Bull Terrier</option>
+<option value="corgi">Pembroke Welsh Corgi</option>
+<option value="newfoundland">Newfoundland</option>
+<option value="saint_bernard">Saint Bernard</option>
+<option value="weimaraner">Weimaraner</option>
+<option value="collie">Collie</option>
+<option value="basset_hound">Basset Hound</option>
+<option value="akita">Akita</option>
+<option value="bloodhound">Bloodhound</option>
+<option value="whippet">Whippet</option>
+<option value="rhodesian_ridgeback">Rhodesian Ridgeback</option>
+<option value="dalmatian">Dalmatian</option>
+<option value="samoyed">Samoyed</option>
+<option value="pug">Pug</option>
+<option value="english_springer">English Springer Spaniel</option>
+<option value="vizsla">Vizsla</option>
+<option value="cane_corso">Cane Corso</option>
+<option value="malamute">Alaskan Malamute</option>
+</select>
+</div>
+<div class="form-group" id="size-group">
+<label class="form-label" for="size">Size (for Mixed Breeds)</label>
+<select class="form-select" id="size">
+<option value="small">Small (Under 15 lbs / 7 kg)</option>
+<option value="medium" selected>Medium (15-50 lbs / 7-23 kg)</option>
+<option value="large">Large (50-90 lbs / 23-41 kg)</option>
+<option value="giant">Giant (Over 90 lbs / 41 kg)</option>
+</select>
+</div>
+<div class="form-group" id="cat-size-group" style="display:none">
+<label class="form-label" for="cat-size">Size / Weight (for Mixed Breeds)</label>
+<select class="form-select" id="cat-size">
+<option value="small">Small (Under 4 lbs / 2 kg)</option>
+<option value="medium" selected>Medium (4-10 lbs / 2-5 kg)</option>
+<option value="large">Large (10-15 lbs / 5-7 kg)</option>
+<option value="giant">Giant (Over 15 lbs / 7 kg)</option>
+</select>
+</div>
+<div class="form-group" id="cow-size-group" style="display:none">
+<label class="form-label" for="cow-size">Size / Weight (for Mixed Breeds)</label>
+<select class="form-select" id="cow-size">
+<option value="small">Small (Under 500 lbs / 230 kg)</option>
+<option value="medium" selected>Medium (500-1000 lbs / 230-450 kg)</option>
+<option value="large">Large (1000-1500 lbs / 450-680 kg)</option>
+<option value="giant">Giant (Over 1500 lbs / 680 kg)</option>
+</select>
+</div>
+<div class="form-group" id="horse-size-group" style="display:none">
+<label class="form-label" for="horse-size">Size / Weight (for Mixed Breeds)</label>
+<select class="form-select" id="horse-size">
+<option value="small">Small - Pony (Under 900 lbs / 400 kg)</option>
+<option value="medium" selected>Medium - Light Horse (900-1200 lbs / 400-540 kg)</option>
+<option value="large">Large - Horse (1200-1800 lbs / 540-820 kg)</option>
+<option value="giant">Giant - Draft Horse (Over 1800 lbs / 820 kg)</option>
+</select>
+</div>
+<div class="form-group" id="rabbit-size-group" style="display:none">
+<label class="form-label" for="rabbit-size">Size / Weight (for Mixed Breeds)</label>
+<select class="form-select" id="rabbit-size">
+<option value="small">Small (Under 3 lbs / 1.4 kg)</option>
+<option value="medium" selected>Medium (3-6 lbs / 1.4-2.7 kg)</option>
+<option value="large">Large (6-10 lbs / 2.7-4.5 kg)</option>
+<option value="giant">Giant (Over 10 lbs / 4.5 kg)</option>
+</select>
+</div>
+<div class="form-group" id="parrot-size-group" style="display:none">
+<label class="form-label" for="parrot-size">Size / Weight (for Mixed Breeds)</label>
+<select class="form-select" id="parrot-size">
+<option value="small">Small (Under 100g)</option>
+<option value="medium" selected>Medium (100-300g)</option>
+<option value="large">Large (300-600g)</option>
+<option value="giant">Giant (Over 600g)</option>
+</select>
+</div>
+<div class="age-inputs">
+<div class="form-group">
+<label class="form-label" for="years">Years</label>
+<input type="number" class="form-input" id="years" min="0" max="100" value="2" placeholder="Years">
+</div>
+<div class="form-group">
+<label class="form-label" for="months">Months</label>
+<input type="number" class="form-input" id="months" min="0" max="11" value="0" placeholder="Months">
+</div>
+</div>
+<button class="calculate-btn" onclick="calculateAge()">Calculate Age</button>
+<div class="result-section" id="result">
+<div class="result-card">
+<img class="result-pet-image" id="result-pet-img" src="/images/dog-header.png" alt="Pet" width="140" height="140">
+<div class="result-pet-title" id="result-pet-title">Your Dog Age Result</div>
+<div class="result-age-number" id="result-age">--</div>
+<div class="result-age-label">years old in human years</div>
+<div class="life-stage-badge" id="life-stage">--</div>
+</div>
+<div class="result-details-grid">
+<div class="detail-box">
+<div class="detail-label">Pet Age</div>
+<div class="detail-value" id="pet-age-display">--</div>
+</div>
+<div class="detail-box">
+<div class="detail-label">Breed</div>
+<div class="detail-value" id="breed-display" style="font-size:0.95rem">--</div>
+</div>
+<div class="detail-box">
+<div class="detail-label">Avg Lifespan</div>
+<div class="detail-value" id="lifespan-display">--</div>
+</div>
+</div>
+<div class="share-section">
+<div class="share-title">Share Your Pet's Age!</div>
+<div class="share-preview" id="share-preview">
+<img class="share-preview-img" id="share-preview-img" src="/images/dog-header.png" alt="Pet" width="80" height="80">
+<div class="share-preview-text" id="share-preview-text">My pet is -- years old in human years!</div>
+</div>
+<div class="share-buttons">
+<a href="#" class="share-btn share-x" id="share-x" target="_blank" rel="noopener">Share on X</a>
+<a href="#" class="share-btn share-facebook" id="share-facebook" target="_blank" rel="noopener">Facebook</a>
+<a href="#" class="share-btn share-whatsapp" id="share-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+<button class="share-btn share-instagram" id="share-instagram" onclick="shareInstagram()">Instagram</button>
+<a href="#" class="share-btn share-pinterest" id="share-pinterest" target="_blank" rel="noopener">Pinterest</a>
+<button class="share-btn share-copy" onclick="copyResult()">Copy Result</button>
+</div>
+</div>
+</div>
+</div>
+<div class="affiliate-section">
+<h3>Is Your Pet Getting Older?</h3>
+<p>Discover vet-recommended joint supplements, senior pet food, and health products trusted by pet owners.</p>
+<a href="https://www.amazon.com/s?k=senior+dog+joint+supplement" class="affiliate-btn" target="_blank" rel="nofollow sponsored">Shop Senior Pet Products</a>
+<p class="affiliate-disclaimer">As an Amazon Associate, we earn from qualifying purchases. This helps us keep the calculator free!</p>
+</div>
+<section class="content-section">
+<div class="section-header">
+<div class="section-icon">S</div>
+<h2>How Our Calculator Works</h2>
+</div>
+<p>Our calculator uses <strong>scientifically-backed formulas</strong> to give you the most accurate estimate of your pet's age in human years. Unlike outdated rules, we account for rapid aging in early years and breed-specific lifespans for dogs, cats, cows, horses, rabbits, and parrots.</p>
+<h3>Formula: Breed-Adjusted Method (Most Accurate)</h3>
+<p>Our default and most accurate method. Different species and breeds have dramatically different lifespans:</p>
+<ul>
+<li><strong>Dogs:</strong> Small breeds live 14-16 years, Giant breeds live 6-10 years</li>
+<li><strong>Cats:</strong> Indoor cats live 12-18 years, varying by breed</li>
+<li><strong>Cows:</strong> Pet cows can live 15-20 years depending on breed</li>
+<li><strong>Horses:</strong> Ponies and light breeds live up to 30 years, draft breeds 20-25 years</li>
+<li><strong>Rabbits:</strong> Small breeds live 10-12 years, Giant breeds 8-10 years</li>
+<li><strong>Parrots:</strong> Budgies live 8-15 years, Macaws can live 50-80 years</li>
+</ul>
+<div class="formula-box">Human Age = 16 x ln(Pet Age) + 31 (Scientific Base)<br>Adjusted by Breed Lifespan for Accuracy</div>
+<p>This formula accounts for the non-linear aging pattern seen across all species.</p>
+</section>
+<section class="content-section">
+<div class="section-header">
+<div class="section-icon">C</div>
+<h2>Pet Age to Human Age Comparison Chart</h2>
+</div>
+<p>Select a pet type to see how they age compared to humans:</p>
+<div class="table-tabs">
+<button class="table-tab active" onclick="showTable('dog')">Dog</button>
+<button class="table-tab" onclick="showTable('cat')">Cat</button>
+<button class="table-tab" onclick="showTable('cow')">Cow</button>
+<button class="table-tab" onclick="showTable('horse')">Horse</button>
+<button class="table-tab" onclick="showTable('rabbit')">Rabbit</button>
+<button class="table-tab" onclick="showTable('parrot')">Parrot</button>
+</div>
+<div class="pet-table-section active" id="table-dog">
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead><tr><th>Dog Age</th><th>Small Breed</th><th>Medium Breed</th><th>Large Breed</th><th>Giant Breed</th></tr></thead>
+<tbody>
+<tr><td>6 months</td><td>8</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+<tr><td>3 years</td><td>28</td><td>29</td><td>30</td><td>32</td></tr>
+<tr><td>5 years</td><td>36</td><td>37</td><td>40</td><td>45</td></tr>
+<tr><td>7 years</td><td>44</td><td>47</td><td>52</td><td>59</td></tr>
+<tr><td>10 years</td><td>56</td><td>62</td><td>70</td><td>79</td></tr>
+<tr><td>12 years</td><td>64</td><td>72</td><td>82</td><td>93</td></tr>
+<tr><td>15 years</td><td>76</td><td>87</td><td>100</td><td>-</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pet-table-section" id="table-cat">
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead><tr><th>Cat Age</th><th>Human Years</th></tr></thead>
+<tbody>
+<tr><td>6 months</td><td>8</td></tr>
+<tr><td>1 year</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td></tr>
+<tr><td>3 years</td><td>28</td></tr>
+<tr><td>5 years</td><td>36</td></tr>
+<tr><td>7 years</td><td>44</td></tr>
+<tr><td>10 years</td><td>56</td></tr>
+<tr><td>12 years</td><td>64</td></tr>
+<tr><td>15 years</td><td>76</td></tr>
+<tr><td>18 years</td><td>88</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pet-table-section" id="table-cow">
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead><tr><th>Cow Age</th><th>Small Breed</th><th>Medium Breed</th><th>Large Breed</th><th>Giant Breed</th></tr></thead>
+<tbody>
+<tr><td>6 months</td><td>8</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+<tr><td>3 years</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+<tr><td>5 years</td><td>33</td><td>36</td><td>39</td><td>42</td></tr>
+<tr><td>7 years</td><td>39</td><td>44</td><td>49</td><td>54</td></tr>
+<tr><td>10 years</td><td>47</td><td>54</td><td>62</td><td>70</td></tr>
+<tr><td>15 years</td><td>59</td><td>70</td><td>82</td><td>95</td></tr>
+<tr><td>18 years</td><td>67</td><td>80</td><td>95</td><td>-</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pet-table-section" id="table-horse">
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead><tr><th>Horse Age</th><th>Pony</th><th>Light Horse</th><th>Horse</th><th>Draft Horse</th></tr></thead>
+<tbody>
+<tr><td>6 months</td><td>8</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+<tr><td>3 years</td><td>26</td><td>26</td><td>26</td><td>26</td></tr>
+<tr><td>5 years</td><td>29</td><td>29</td><td>30</td><td>31</td></tr>
+<tr><td>7 years</td><td>32</td><td>32</td><td>34</td><td>36</td></tr>
+<tr><td>10 years</td><td>37</td><td>38</td><td>39</td><td>44</td></tr>
+<tr><td>15 years</td><td>44</td><td>46</td><td>49</td><td>56</td></tr>
+<tr><td>20 years</td><td>52</td><td>54</td><td>58</td><td>-</td></tr>
+<tr><td>25 years</td><td>60</td><td>63</td><td>-</td><td>-</td></tr>
+<tr><td>30 years</td><td>68</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pet-table-section" id="table-rabbit">
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead><tr><th>Rabbit Age</th><th>Small Breed</th><th>Medium Breed</th><th>Large Breed</th><th>Giant Breed</th></tr></thead>
+<tbody>
+<tr><td>3 months</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
+<tr><td>6 months</td><td>10</td><td>10</td><td>10</td><td>10</td></tr>
+<tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+<tr><td>3 years</td><td>30</td><td>31</td><td>32</td><td>33</td></tr>
+<tr><td>5 years</td><td>41</td><td>44</td><td>47</td><td>50</td></tr>
+<tr><td>7 years</td><td>52</td><td>57</td><td>62</td><td>67</td></tr>
+<tr><td>8 years</td><td>58</td><td>64</td><td>70</td><td>76</td></tr>
+<tr><td>10 years</td><td>68</td><td>76</td><td>85</td><td>-</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="pet-table-section" id="table-parrot">
+<div class="table-wrapper">
+<table class="comparison-table">
+<thead><tr><th>Parrot Age</th><th>Small (Budgie)</th><th>Medium (Cockatiel)</th><th>Large (African Grey)</th><th>Giant (Macaw)</th></tr></thead>
+<tbody>
+<tr><td>6 months</td><td>8</td><td>8</td><td>8</td><td>8</td></tr>
+<tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+<tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+<tr><td>3 years</td><td>31</td><td>27</td><td>25</td><td>25</td></tr>
+<tr><td>5 years</td><td>46</td><td>33</td><td>28</td><td>27</td></tr>
+<tr><td>7 years</td><td>60</td><td>39</td><td>31</td><td>28</td></tr>
+<tr><td>10 years</td><td>68</td><td>47</td><td>35</td><td>30</td></tr>
+<tr><td>15 years</td><td>-</td><td>61</td><td>43</td><td>34</td></tr>
+<tr><td>20 years</td><td>-</td><td>68</td><td>50</td><td>38</td></tr>
+<tr><td>30 years</td><td>-</td><td>-</td><td>65</td><td>46</td></tr>
+<tr><td>50 years</td><td>-</td><td>-</td><td>95</td><td>61</td></tr>
+<tr><td>60 years</td><td>-</td><td>-</td><td>-</td><td>68</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<p style="font-size:0.9rem;color:var(--text-light);margin-top:12px">* Values are approximate and based on breed-adjusted formulas.</p>
+</section>
+<section class="content-section">
+<div class="section-header">
+<div class="section-icon">L</div>
+<h2>Understanding Your Pet's Life Stage</h2>
+</div>
+<p>Knowing your pet's life stage helps you provide the best care at every age. Stages are based on human-equivalent years:</p>
+<div class="stage-cards">
+<div class="stage-card stage-card-puppy">
+<img src="/images/stage-baby.png" alt="Baby Pet" class="stage-img" width="80" height="80">
+<div class="stage-name">Baby</div>
+<div class="stage-desc">0-1 year (Human: 0-15)<br>Rapid growth phase. Species-specific nutrition, vaccinations, and early socialization are crucial.</div>
+</div>
+<div class="stage-card stage-card-young">
+<img src="/images/stage-young.png" alt="Young Adult Pet" class="stage-img" width="80" height="80">
+<div class="stage-name">Young Adult</div>
+<div class="stage-desc">1-3 years (Human: 15-28)<br>Peak energy and health. Transition to adult diet. Regular exercise and mental stimulation.</div>
+</div>
+<div class="stage-card stage-card-adult">
+<img src="/images/stage-adult.png" alt="Adult Pet" class="stage-img" width="80" height="80">
+<div class="stage-name">Adult</div>
+<div class="stage-desc">3-7 years (Human: 28-50)<br>Mature and settled. Maintain healthy weight, regular vet checkups, and dental care.</div>
+</div>
+<div class="stage-card stage-card-senior">
+<img src="/images/stage-senior.png" alt="Senior Pet" class="stage-img" width="80" height="80">
+<div class="stage-name">Senior</div>
+<div class="stage-desc">7-10 years (Human: 50-65)<br>Slowing down. Consider senior diet, joint supplements, and more frequent vet visits.</div>
+</div>
+<div class="stage-card stage-card-geriatric">
+<img src="/images/stage-geriatric.png" alt="Geriatric Pet" class="stage-img" width="80" height="80">
+<div class="stage-name">Geriatric</div>
+<div class="stage-desc">10+ years (Human: 65+)<br>Needs special care. Watch for cognitive decline, arthritis, and organ health issues.</div>
+</div>
+</div>
+</section>
+<section class="content-section">
+<div class="section-header">
+<div class="section-icon">Q</div>
+<h2>Frequently Asked Questions</h2>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">How do you calculate a pet's age in human years?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">Our calculator uses a scientifically adjusted formula: Year 1 equals 15 human years, Year 2 adds 9 more (total 24), and each subsequent year is adjusted based on the specific breed's average lifespan. This applies to dogs, cats, cows, horses, rabbits, and parrots.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">Is the 7-year rule for dog years accurate?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">No, the multiply-by-7 rule is outdated and inaccurate for all species. Pets age much faster in their first two years. A 1-year-old dog is about 15 in human years, not 7. Scientific research using DNA methylation has shown that aging is logarithmic, not linear.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">How long do parrots live compared to other pets?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">Parrots have the longest lifespans among common pets. Small parrots like budgies live 8-15 years, while large macaws can live 50-80 years. This means a 10-year-old macaw is only about 30 in human years, while a 10-year-old budgie is around 68.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">Do small pets always live longer than large ones?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">It depends on the species. Among dogs, small breeds generally live longer. However, for parrots, larger species like macaws live much longer than small budgies. For rabbits, giant breeds tend to have slightly shorter lifespans than dwarf breeds.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">How do cow years compare to human years?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">Cows mature relatively quickly. Year 1 equals about 15 human years, and Year 2 equals 24 total. After that, they age about 2.5-4 human years per cow year depending on the breed. Pet cows can live 15-20 years, making them comparable to large dogs in aging rate.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">How do horse years compare to human years?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">Horses reach about 15 human years at age 1 and 24 human years by age 2, just like most other pets. After that they age more gradually - roughly 2 to 2.5 human years per horse year. Ponies and light breeds often live close to 30 years, while draft breeds like Clydesdales and Belgians tend to live 20-25 years.</div>
+</div>
+<div class="faq-item">
+<div class="faq-question" onclick="toggleFaq(this)">When is a rabbit considered a senior?<span class="faq-toggle">+</span></div>
+<div class="faq-answer">Rabbits are generally considered seniors around 5-6 years old, which equals roughly 40-50 human years. Giant breeds may become seniors earlier (around 4-5 years), while smaller dwarf breeds may not show senior signs until 6-7 years.</div>
+</div>
+</div>
+</section>
+<div class="affiliate-section">
+<h3>Keep Your Pet Healthy at Every Age</h3>
+<p>Regular veterinary checkups are essential for your pet's wellbeing. Find the best pet insurance plans and compare coverage options for your furry or feathered friend.</p>
+<a href="https://www.petinsurance.com" class="affiliate-btn" target="_blank" rel="nofollow sponsored" style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);box-shadow:0 4px 14px rgba(16,185,129,0.4)">Compare Pet Insurance Plans</a>
+</div>
+</div>
+</div>
+<footer class="site-footer">
+<div class="footer-brand">Pet Age Calculator</div>
+<p class="footer-tagline">Helping pet owners understand their animal friends better</p>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">About Us</a>
+<a href="/contact.html">Contact Us</a>
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Use</a>
+</div>
+<div class="footer-divider"></div>
+<p class="footer-copyright">&copy; 2026 Pet Age Calculator. All rights reserved.</p>
+<div class="footer-disclaimer">
+<strong>Disclaimer:</strong> This calculator provides estimates based on general formulas and breed averages for dogs, cats, cows, horses, rabbits, and parrots. Every pet is unique. Always consult your veterinarian for personalized health advice. This tool is for informational purposes only and does not replace professional veterinary care.
+</div>
+</footer>
+<script src="/common.js"></script>
+<script src="/calculator.js"></script>
+</body>
+</html>
