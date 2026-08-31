@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Pet Age Calculator</title>
+<meta name="description" content="Pet care tips, dental care, nutrition, training and more for dogs, cats, cows, horses, rabbits and parrots.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Pet Age Calculator">
+<link rel="canonical" href="https://www.petagecalc.in/blog/">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog | Pet Age Calculator">
+<meta property="og:description" content="Pet care tips, dental care, nutrition, training and more for dogs, cats, cows, horses, rabbits and parrots.">
+<meta property="og:url" content="https://www.petagecalc.in/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" class="nav-brand">Pet Age Calculator</a>
+<div class="nav-links">
+<a href="/" class="nav-link">Home <span class="arrow-icon">&rarr;</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">&rarr;</span></a>
+<a href="/about.html" class="nav-link">About Us <span class="arrow-icon">&rarr;</span></a>
+<a href="/contact.html" class="nav-link">Contact Us <span class="arrow-icon">&rarr;</span></a>
+</div>
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+</div>
+</nav>
+<div class="mobile-nav-overlay" id="mobileNav">
+<a href="/" class="nav-link">Home <span class="arrow-icon">&rarr;</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">&rarr;</span></a>
+<a href="/about.html" class="nav-link">About Us <span class="arrow-icon">&rarr;</span></a>
+<a href="/contact.html" class="nav-link">Contact Us <span class="arrow-icon">&rarr;</span></a>
+</div>
+
+<header class="site-header" style="padding:50px 20px 60px">
+<div class="header-content">
+<h1 class="logo" style="font-size:2.2rem">Pet Care Blog</h1>
+<p class="tagline">Tips, guides and answers for dog, cat, cow, horse, rabbit and parrot owners</p>
+</div>
+</header>
+
+<div class="container" style="max-width:1100px;margin-top:-30px">
+<!--
+  IMPORTANT: Yahan kabhi manually blog card paste MAT karo.
+  Yeh grid /blog/articles.json se apne aap bharta hai (common.js -> renderAllArticles).
+  articles.json GitHub Actions khud update karta hai jab bhi blog/ folder me
+  koi naya .html article push hota hai. Naya article dikhane ke liye bas
+  scripts/article-template.html se file copy karke blog/ folder me push kar do.
+-->
+<div class="blog-card-grid" id="all-articles-grid" style="margin:24px 0 40px"></div>
+</div>
+
+<footer class="site-footer">
+<div class="footer-brand">Pet Age Calculator</div>
+<p class="footer-tagline">Helping pet owners understand their animal friends better</p>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">About Us</a>
+<a href="/contact.html">Contact Us</a>
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Use</a>
+</div>
+<div class="footer-divider"></div>
+<p class="footer-copyright">&copy; 2026 Pet Age Calculator. All rights reserved.</p>
+</footer>
+<script src="/common.js"></script>
+<script>renderAllArticles('all-articles-grid');</script>
+</body>
+</html>
