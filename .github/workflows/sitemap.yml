@@ -1,0 +1,52 @@
+name: Site automation (sitemap + head snippets)
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate sitemap.xml (if script exists)
+        run: |
+          if [ -f scripts/generate_sitemap.py ]; then
+            python3 scripts/generate_sitemap.py
+          else
+            echo "scripts/generate_sitemap.py not found, skipping"
+          fi
+
+      - name: Generate blog/articles.json (if script exists)
+        run: |
+          if [ -f scripts/generate_blog_index.py ]; then
+            python3 scripts/generate_blog_index.py
+          else
+            echo "scripts/generate_blog_index.py not found, skipping"
+          fi
+
+      - name: Inject head-snippets.html into every page's <head>
+        run: python3 scripts/inject_head_snippets.py
+
+      - name: Commit updated files (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- sitemap.xml blog/articles.json '*.html'; then
+            echo "Nothing changed, nothing to commit"
+          else
+            git add sitemap.xml blog/articles.json '*.html'
+            git commit -m "chore: auto-update sitemap.xml, blog/articles.json and head snippets [skip ci]"
+            git push
+          fi
