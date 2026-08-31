@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 1. TITLE: yeh browser tab + Google search + related-article card me dikhega -->
+<title>Your Article Title Here | Pet Age Calculator</title>
+<!-- 2. DESCRIPTION: yeh related-article card ka excerpt / Google snippet banega -->
+<meta name="description" content="One or two sentence summary of this article.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Pet Age Calculator">
+<!-- 3. CANONICAL: file ka naam yahan bhi match hona chahiye -->
+<link rel="canonical" href="https://www.petagecalc.in/blog/your-article-file-name.html">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Your Article Title Here">
+<meta property="og:description" content="One or two sentence summary of this article.">
+<meta property="og:url" content="https://www.petagecalc.in/blog/your-article-file-name.html">
+<!-- 4. OG IMAGE: related-article card me yehi thumbnail dikhega -->
+<meta property="og:image" content="https://raw.githubusercontent.com/PetAgeCalc/pet-age-calculator/main/images/your-image.jpg">
+<!-- 4b. IMAGE ALT TEXT: thumbnail ka accessibility/SEO alt text -->
+<meta name="article:image_alt" content="Describe the thumbnail image here">
+<!-- 5. PUBLISHED DATE: related-article cards isi date se newest-first sort hote hain -->
+<meta name="article:published_time" content="2026-08-31">
+<!-- 6. CATEGORY: card ke top-left par dikhega, e.g. PET CARE, TRAINING, NUTRITION -->
+<meta name="article:category" content="PET CARE">
+<!-- 7. READ TIME: card ke meta line me dikhega -->
+<meta name="article:read_time" content="5 min read">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="navbar-inner">
+<a href="/" class="nav-brand">Pet Age Calculator</a>
+<div class="nav-links">
+<a href="/" class="nav-link">Home <span class="arrow-icon">&rarr;</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">&rarr;</span></a>
+<a href="/about.html" class="nav-link">About Us <span class="arrow-icon">&rarr;</span></a>
+<a href="/contact.html" class="nav-link">Contact Us <span class="arrow-icon">&rarr;</span></a>
+</div>
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+</div>
+</nav>
+<div class="mobile-nav-overlay" id="mobileNav">
+<a href="/" class="nav-link">Home <span class="arrow-icon">&rarr;</span></a>
+<a href="/blog/" class="nav-link">Blog <span class="arrow-icon">&rarr;</span></a>
+<a href="/about.html" class="nav-link">About Us <span class="arrow-icon">&rarr;</span></a>
+<a href="/contact.html" class="nav-link">Contact Us <span class="arrow-icon">&rarr;</span></a>
+</div>
+
+<div class="container" style="max-width:800px;margin-top:40px">
+
+<!-- ===== ARTICLE CONTENT: apna asli article yahan likho ===== -->
+<section class="content-section">
+<h1>Your Article Title Here</h1>
+<p>Apna article content yahan likho...</p>
+</section>
+<!-- ===== ARTICLE CONTENT END ===== -->
+
+<!-- ===== RELATED ARTICLES: is poore block ko copy-paste karo, kuch edit mat karo ===== -->
+<section class="related-articles-section content-section">
+<div class="section-header">
+<div class="section-icon">R</div>
+<h2>You Might Also Like</h2>
+</div>
+<div class="blog-card-grid" id="related-articles-grid"></div>
+</section>
+<!-- ===== RELATED ARTICLES END ===== -->
+
+</div>
+
+<footer class="site-footer">
+<div class="footer-brand">Pet Age Calculator</div>
+<p class="footer-tagline">Helping pet owners understand their animal friends better</p>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/blog/">Blog</a>
+<a href="/about.html">About Us</a>
+<a href="/contact.html">Contact Us</a>
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/terms.html">Terms of Use</a>
+</div>
+<div class="footer-divider"></div>
+<p class="footer-copyright">&copy; 2026 Pet Age Calculator. All rights reserved.</p>
+</footer>
+<script src="/common.js"></script>
+<script>renderRelatedArticles('related-articles-grid');</script>
+</body>
+</html>
