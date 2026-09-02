@@ -1,25 +1,20 @@
 name: Site automation (sitemap + head snippets)
-
 on:
   push:
     branches: [ main ]
   workflow_dispatch: {}
-
 permissions:
   contents: write
-
 jobs:
   build-sitemap:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-
       - name: Generate sitemap.xml (if script exists)
         run: |
           if [ -f scripts/generate_sitemap.py ]; then
@@ -27,7 +22,6 @@ jobs:
           else
             echo "scripts/generate_sitemap.py not found, skipping"
           fi
-
       - name: Generate blog/articles.json (if script exists)
         run: |
           if [ -f scripts/generate_blog_index.py ]; then
@@ -35,10 +29,28 @@ jobs:
           else
             echo "scripts/generate_blog_index.py not found, skipping"
           fi
-
       - name: Inject head-snippets.html into every page's <head>
         run: python3 scripts/inject_head_snippets.py
-
+      - name: Validate changed blog articles
+        run: |
+          FILES=$(git diff --name-only HEAD~1 HEAD -- 'blog/*.html' 2>/dev/null | grep -v 'blog/index.html' || true)
+          if [ -z "$FILES" ]; then
+            echo "No blog articles changed, skipping validation"
+          elif [ ! -f scripts/validate_article.py ]; then
+            echo "scripts/validate_article.py not found, skipping validation"
+          else
+            FAILED=0
+            while IFS= read -r file; do
+              [ -z "$file" ] && continue
+              echo "::group::Validating $file"
+              python3 scripts/validate_article.py "$file" || FAILED=1
+              echo "::endgroup::"
+            done <<< "$FILES"
+            if [ "$FAILED" -eq 1 ]; then
+              echo "One or more articles failed validation. Fix and push again."
+              exit 1
+            fi
+          fi
       - name: Commit updated files (if changed)
         run: |
           git config user.name "github-actions[bot]"
